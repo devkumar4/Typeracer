@@ -17,7 +17,7 @@ export default function GamePlayer({ gameId, name }: GameProps) {
   const [inputParagraph, setInputParagraph] = useState<string>("");
 
   useEffect(() => {
-    const socket = io(process.env.NEXT_PUBLIC_WEBSOCKET_URL as string, {
+    const socket = io("https://typeracer-vfsc.onrender.com/", {
       transports: ["websocket"],
     });
     setIoInstance(socket);
